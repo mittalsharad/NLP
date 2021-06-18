@@ -71,7 +71,6 @@ text = "Nick likes to play football, however he is not too fond of tennis."
 text_tokens = word_tokenize(text)
 tokens_without_sw = [word for word in text_tokens if not word in stopwords.words()]
 ```
-Compete Implementation of these Code Blocks can be found ih the Notebook.
 
 #### 2. Stopword Removal using spaCy
 spaCy is one of the most versatile and widely used libraries in NLP. We can quickly and efficiently remove stopwords from the given text using SpaCy. It has a list of its own stopwords that can be imported as STOP_WORDS from the spacy.lang.en.stop_words class.
@@ -99,4 +98,4 @@ While using gensim for removing stopwords, we can directly use it on the raw tex
 
 Thats all related for Stop word Removal.
 
-All the code blocks are explained in more details in the Notebook, alone with some extra information to make the task more refined.
+All the code blocks are explained in more details in the [Notebook](https://github.com/mittalsharad/NLP/blob/main/NLP_Basics/Stop%20Word%20Removal/Stop%20Word%20Removal.ipynb), alone with some extra information to make the task more refined.
