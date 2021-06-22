@@ -2,7 +2,9 @@
 
 This Folder contains info about using  `Hugging Face` to solve NLP tasks.
 
-This is based on the Hugging face course:
+This is based on the [Hugging face course](https://huggingface.co/course/chapter0?fw=pt)
 
-https://huggingface.co/course/chapter0?fw=pt
 
+**Hugging face Datasets**:
+
+https://github.com/huggingface/datasets
