@@ -61,5 +61,5 @@ Some of the currently [available pipelines](https://huggingface.co/transformers/
 
 For detailed info on how to use these pipelines, refer to the [Notebook](https://github.com/mittalsharad/NLP/blob/main/HuggingFace/Transformer%20Models/Transformer.ipynb)
 
-# [How to Transformers Work](https://huggingface.co/course/chapter1/4?fw=pt)
+# [How do Transformers Work](https://huggingface.co/course/chapter1/4?fw=pt)
 
