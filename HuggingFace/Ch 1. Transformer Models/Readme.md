@@ -59,7 +59,7 @@ Some of the currently [available pipelines](https://huggingface.co/transformers/
 - translation
 - zero-shot-classification
 
-For detailed info on how to use these pipelines, refer to the [Notebook](https://github.com/mittalsharad/NLP/blob/main/HuggingFace/Transformer%20Models/Transformer.ipynb)
+For detailed info on how to use these pipelines, refer to the [Notebook](https://github.com/mittalsharad/NLP/blob/main/HuggingFace/Ch%201.%20Transformer%20Models/Transformer.ipynb)
 
 # [How do Transformers Work](https://huggingface.co/course/chapter1/4?fw=pt)
 
