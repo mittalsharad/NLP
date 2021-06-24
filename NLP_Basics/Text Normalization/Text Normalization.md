@@ -47,3 +47,130 @@ Stemming is a text normalization technique that cuts off the end or beginning of
 For example, runs, running, ran are all forms of the word run, therefore run is the lemma of all these words. Because lemmatization returns an actual word of the language, it is used where it is necessary to get valid words.
 
 ## Methods to Perform Text Normalization
+
+**1. Text Normalization using NLTK**
+
+`PorterStemmer()` and `WordNetLemmatizer()` can be used in NLTK for Stemming and Lemmatization respectively.
+
+**Stemming**
+```python
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize 
+from nltk.stem import PorterStemmer
+
+set(stopwords.words('english'))
+
+text = """He determined to drop his litigation with the monastry, and relinguish his claims to the wood-cuting and 
+fishery rihgts at once. He was the more ready to do this becuase the rights had become much less valuable, and he had 
+indeed the vaguest idea where the wood and river in question were."""
+
+stop_words = set(stopwords.words('english')) 
+  
+word_tokens = word_tokenize(text) 
+    
+filtered_sentence = [] 
+  
+for w in word_tokens: 
+    if w not in stop_words: 
+        filtered_sentence.append(w) 
+
+Stem_words = []
+ps =PorterStemmer()
+for w in filtered_sentence:
+    rootWord=ps.stem(w)
+    Stem_words.append(rootWord)
+print("Filtered Sentencs:")
+print(filtered_sentence)
+print("Stemmed Words:")
+print(Stem_words)
+```
+Output
+```python
+Filtered Sentencs:
+
+He determined drop litigation monastry, relinguish claims wood-cuting fishery rihgts. He 
+ready becuase rights become much less valuable, indeed vaguest idea wood river question.
+
+Stemmed Words:
+He determin drop litig monastri, relinguish claim wood-cut fisheri rihgt. He readi becuas
+right become much less valuabl, inde vaguest idea wood river question.
+```
+**Lemmatization**
+```python
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize 
+import nltk
+from nltk.stem import WordNetLemmatizer
+set(stopwords.words('english'))
+
+text = """He determined to drop his litigation with the monastry, and relinguish his claims to the wood-cuting and 
+fishery rihgts at once. He was the more ready to do this becuase the rights had become much less valuable, and he had 
+indeed the vaguest idea where the wood and river in question were."""
+
+stop_words = set(stopwords.words('english')) 
+  
+word_tokens = word_tokenize(text) 
+    
+filtered_sentence = [] 
+  
+for w in word_tokens: 
+    if w not in stop_words: 
+        filtered_sentence.append(w) 
+print("Filtered Sentence:") 
+print(filtered_sentence) 
+
+lemma_word = []
+import nltk
+from nltk.stem import WordNetLemmatizer
+wordnet_lemmatizer = WordNetLemmatizer()
+for w in filtered_sentence:
+    word1 = wordnet_lemmatizer.lemmatize(w, pos = "n")
+    word2 = wordnet_lemmatizer.lemmatize(word1, pos = "v")
+    word3 = wordnet_lemmatizer.lemmatize(word2, pos = ("a"))
+    lemma_word.append(word3)
+print("Lemmatized words:")
+print(lemma_word)
+```
+Output
+```python
+Filtered Sentence:
+He determined drop litigation monastry, relinguish claims wood-cuting fishery rihgts. He 
+ready becuase rights become much less valuable, indeed vaguest idea wood river question.
+
+Lemmatized words:
+He determined drop litigation monastry, relinguish claim wood-cuting fishery rihgts. He 
+ready becuase right become much le valuable, indeed vaguest idea wood river question.
+```
+
+> Here, v stands for verb, a stands for adjective and n stands for noun. The lemmatizer only lemmatizes those words which match the pos parameter of the lemmatize method.
+
+Lemmatization is done on the basis of part-of-speech tagging (POS tagging). We’ll talk in detail about POS tagging in an upcoming article.
+
+**2. Text Normalization using spaCy**
+
+SpaCy is an amazing NLP library. It provides many industry-level methods to perform lemmatization. Unfortunately, spaCy has no module for stemming. To perform lemmatization, check out the below code:
+```python
+#make sure to download the english model with "python -m spacy download en"
+
+import en_core_web_sm
+nlp = en_core_web_sm.load()
+
+doc = nlp(u"""He determined to drop his litigation with the monastry, and relinguish his claims to the wood-cuting and 
+fishery rihgts at once. He was the more ready to do this becuase the rights had become much less valuable, and he had 
+indeed the vaguest idea where the wood and river in question were.""")
+
+lemma_word1 = [] 
+for token in doc:
+    lemma_word1.append(token.lemma_)
+lemma_word1
+```
+Output
+```python
+-PRON- determine to drop -PRON- litigation with the monastry, and relinguish -PRON- claim
+to the wood-cuting and \n fishery rihgts at once. -PRON- be the more ready to do this 
+becuase the right have become much less valuable, and -PRON- have \n indeed the vague idea
+where the wood and river in question be.
+```
+
+Here -PRON- is the notation for pronoun which could easily be removed using regular expressions. The benefit of spaCy is that we do not have to pass any pos parameter to perform lemmatization.
+
