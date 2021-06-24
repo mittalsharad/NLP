@@ -23,7 +23,7 @@ These tags are used in the Universal Dependencies (UD) (latest version 2), a pro
 You can read more about each one of them [here](https://universaldependencies.org/u/pos/).
 
 **2. Detailed POS Tags:** 
-These tags are the result of the division of universal POS tags into various tags, like NNS for common plural nouns and NN for the singular common noun compared to NOUN for common nouns in English. These tags are language-specific. You can take a look at the complete list here.
+These tags are the result of the division of universal POS tags into various tags, like NNS for common plural nouns and NN for the singular common noun compared to NOUN for common nouns in English. These tags are language-specific. You can take a look at the complete list [here](https://spacy.io/api/data-formats#pos-en).
 
 ```python
 import spacy
