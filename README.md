@@ -19,6 +19,8 @@ The list of al the Blogs which I have written on NLP.
 4. [**Text Normalization(Stemming/Lemmatization)**](https://github.com/mittalsharad/NLP/tree/main/NLP_Basics/Text%20Normalization)
 5. [**Stop Word Removal**](https://github.com/mittalsharad/NLP/tree/main/NLP_Basics/Stop%20Word%20Removal)
 6. [**Part of Speech (POS) Tagging**](https://github.com/mittalsharad/NLP/tree/main/NLP_Basics/Part%20of%20Speech)
+7. [**Bag of Words (BOW)**](https://github.com/mittalsharad/NLP/tree/main/NLP_Basics/Bag%20of%20Words)
+8. [**Term Frequency-Inverse Document Frequency (TF-IDF)**](https://github.com/mittalsharad/NLP/tree/main/NLP_Basics/TF-IDF)
 
 
 # My Projects
