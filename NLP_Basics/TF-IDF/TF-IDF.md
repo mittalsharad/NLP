@@ -80,4 +80,4 @@ Review 3: This movie is spooky and good
 
 We have now obtained the TF-IDF scores for our vocabulary. TF-IDF also gives larger values for less frequent words and is high when both IDF and TF values are high i.e the word is rare in all the documents combined but frequent in a single document.
 
-For implementation, refer Notebook
+For implementation, refer [Notebook](https://github.com/mittalsharad/NLP/blob/main/NLP_Basics/TF-IDF/TF_IDF.ipynb)
