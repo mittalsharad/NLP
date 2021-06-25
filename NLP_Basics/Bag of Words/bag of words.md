@@ -28,7 +28,7 @@ If the new sentences contain new words, then our vocabulary size would increase 
 Additionally, the vectors would also contain many 0s, thereby resulting in a sparse matrix (which is what we would like to avoid)
 We are retaining no information on the grammar of the sentences nor on the ordering of the words in the text.
 
-For implementation, Refer to Notebook
+For implementation, Refer to [Notebook](https://github.com/mittalsharad/NLP/blob/main/NLP_Basics/Bag%20of%20Words/Bag_of_Words(BOW).ipynb)
 
 # What are N-Grams?
 
