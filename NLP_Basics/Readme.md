@@ -15,7 +15,7 @@ It includes:
 
 2. Embeddings and Representations
     - 1. [Bag of Words (BOW)](https://github.com/mittalsharad/NLP/tree/main/NLP_Basics/Bag%20of%20Words)
-    - 2. Term Frequency-Inverse Document Frequency (TF-IDF)
+    - 2. [Term Frequency-Inverse Document Frequency (TF-IDF)](https://github.com/mittalsharad/NLP/tree/main/NLP_Basics/TF-IDF)
     - 3. Word2Vec
 
 3. Modelling Techniques
