@@ -17,6 +17,7 @@ It includes:
     - 1. [Bag of Words (BOW)](https://github.com/mittalsharad/NLP/tree/main/NLP_Basics/Bag%20of%20Words)
     - 2. [Term Frequency-Inverse Document Frequency (TF-IDF)](https://github.com/mittalsharad/NLP/tree/main/NLP_Basics/TF-IDF)
     - 3. Word2Vec
+    - 4. GloVe
 
 3. Modelling Techniques
     - Classical ML Algorithms like Naive Bayes
