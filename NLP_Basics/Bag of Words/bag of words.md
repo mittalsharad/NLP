@@ -29,3 +29,42 @@ Additionally, the vectors would also contain many 0s, thereby resulting in a spa
 We are retaining no information on the grammar of the sentences nor on the ordering of the words in the text.
 
 For implementation, Refer to Notebook
+
+# What are N-Grams?
+
+Again same questions, what are n-grams and why do we use them? Let us understand this with an example below-
+
+Sentence 1: “This is a good job. I will not miss it for anything”
+
+Sentence 2: ”This is not good at all”
+
+For this example, let us take the vocabulary of 5 words only. The five words being-
+
+good
+job
+miss
+not
+all
+
+So, the respective vectors for these sentences are:
+
+“This is a good job. I will not miss it for anything”=[1,1,1,1,0]
+
+”This is not good at all”=[1,0,0,1,1]
+
+Can you guess what is the problem here? Sentence 2 is a negative sentence and sentence 1 is a positive sentence. Does this reflect in any way in the vectors above? Not at all. So how can we solve this problem? Here come the N-grams to our rescue.
+
+An N-gram is an N-token sequence of words: a 2-gram (more commonly called a bigram) is a two-word sequence of words like “really good”, “not good”, or “your homework”, and a 3-gram (more commonly called a trigram) is a three-word sequence of words like “not at all”, or “turn off light”.
+
+For example, the bigrams in the first line of text in the previous section: “This is not good at all” are as follows:
+
+“This is”
+“is not”
+“not good”
+“good at”
+“at all”
+
+Now if instead of using just words in the above example, we use bigrams (Bag-of-bigrams) as shown above. The model can differentiate between sentence 1 and sentence 2. So, using bi-grams makes tokens more understandable (for example, “HSR Layout”, in Bengaluru, is more informative than “HSR” and “layout”)
+
+So we can conclude that a bag-of-bigrams representation is much more powerful than bag-of-words, and in many cases proves very hard to beat.
+
